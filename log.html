@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>يوتيوبي | السجل</title>
+    <link rel="stylesheet" href="css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha256-T/zFmO5s/0aSwc6ics2KLxlfbewyRz6UNw1s3Ppf5gE="
+      crossorigin="anonymous"
+    />-->
+</head>
+<body class="mt-5 rtl">
+    <div id="top-menu">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+          <i class="fas fa-bars fa-lg"></i>
+          <div class="container-fluid">
+            <b>
+              <a class="navbar-brand" href="index.html">
+                يوتيوبي
+                <span class="video-icon"><i class="fas fa-play-circle"></i></span>
+              </a>
+            </b>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-lg-auto">
+                <li class="nav-item active">
+                  <a class="nav-link mr-3" href="index.html">الفيديوهات المقترحة</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-3" href="#">المرفوعة حديثاً</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ps-0" href="log.html" tabindex="-1">سجل المشاهدة</a>
+                </li>
+              </ul>
+              <div class="form-inline my-2 my-lg-0">
+                <input class="form-control me-sm-2" type="search" placeholder="إبحث">
+                <button onclick="location.href='search.html';" class="btn btn-outline-info ml-2 my-2 my-sm-0" type="submit">إبحث</button>
+              </div>
+              <a class="nav-link login" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل الدخول</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5>
+                <button type="button" class="close" data-bs-dismiss="modal">
+                  <spam>&times;</spam>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="email" class="col-form-label">البريد الالكتروني:</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="col-form-label">كلمة المرور:</label>
+                    <input type="password" class="form-control" id="password">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <a href="">نسيت كلمة المرور</a>
+                <a href=""class="mx-auto">إنشاء حساب</a>
+                <button type="button" class="btn btn-primary">دخول</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="history-page pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <input type="search" placeholder="ابحث في التاريخ" class="form-control my-3 border-0">
+            <hr>
+            <label>نوع السجل :</label>
+            <div class="list-group list-group-flush pr-0" id="list-tab" >
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home">سجل المشاهدة</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile">سجل البحث </a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages">التعليقات</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings">المنتدى</a>
+            </div>
+            <label class="mt-4">التاريخ :</label>
+            <div class="list-group list-group-flush pr-0" id="list-tab" >
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home">منذ 24 ساعة </a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile">منذ 3 أيام</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages">منذ أسبوع</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings">منذ شهر</a>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 my-3">
+                  <div class="card">
+                    <div class="card-horizontal d-md-flex d-block">
+                      <div class="img-square-wrapper">
+                        <a href="watch.html">
+                          <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap">
+                        </a>
+                      </div>
+                      <div class="card-body p-2">
+                        <a href="watch.html">
+                          <h4 class="card-title"> كيف تستخدم أدوات المطور DevTools في Chrome</h4>
+                        </a>
+                        <p class="card-text">نتعرف في هذا الدرس على أدوات المطور DevTools التي يتيحها متصفح google chrome و التي تمكنك من تتبع
+                          مشاكل التنسيق CSS بفعالية. و اكتشاف أخطاء JavaScript بسهولة. بالإضافة إلى أنها تقدم لك إيضاءات و معلومات حول أداء الموقع
+                        </p>
+                        <small class="text-muted">
+                          <i class="fas fa-film"></i> <span>3 آلاف مشاهدة</span>
+                          <i class="far fa-clock"></i> <span>قبل 9 أشهر</span>
+                        </small>
+                        <a href="channel.html" class="channel-img">
+                          <img src="img//khamsat.jpg" alt="channel image" class="rounded-circle ms-3" width="30px">
+                          <span class="card-text">موقع خمسات </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 my-3">
+                  <div class="card">
+                    <div class="card-horizontal d-md-flex d-block">
+                      <div class="img-square-wrapper">
+                        <a href="watch.html">
+                          <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap">
+                        </a>
+                      </div>
+                      <div class="card-body p-2">
+                        <a href="watch.html">
+                          <h4 class="card-title"> كيف تستخدم أدوات المطور DevTools في Chrome</h4>
+                        </a>
+                        <p class="card-text">نتعرف في هذا الدرس على أدوات المطور DevTools التي يتيحها متصفح google chrome و التي تمكنك من تتبع
+                          مشاكل التنسيق CSS بفعالية. و اكتشاف أخطاء JavaScript بسهولة. بالإضافة إلى أنها تقدم لك إيضاءات و معلومات حول أداء الموقع
+                        </p>
+                        <small class="text-muted">
+                          <i class="fas fa-film"></i> <span>3 آلاف مشاهدة</span>
+                          <i class="far fa-clock"></i> <span>قبل 9 أشهر</span>
+                        </small>
+                        <a href="channel.html" class="channel-img">
+                          <img src="img//khamsat.jpg" alt="channel image" class="rounded-circle ms-3" width="30px">
+                          <span class="card-text">موقع خمسات </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 my-3">
+                  <div class="card">
+                    <div class="card-horizontal d-md-flex d-block">
+                      <div class="img-square-wrapper">
+                        <a href="watch.html">
+                          <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap">
+                        </a>
+                      </div>
+                      <div class="card-body p-2">
+                        <a href="watch.html">
+                          <h4 class="card-title"> كيف تستخدم أدوات المطور DevTools في Chrome</h4>
+                        </a>
+                        <p class="card-text">نتعرف في هذا الدرس على أدوات المطور DevTools التي يتيحها متصفح google chrome و التي تمكنك من تتبع
+                          مشاكل التنسيق CSS بفعالية. و اكتشاف أخطاء JavaScript بسهولة. بالإضافة إلى أنها تقدم لك إيضاءات و معلومات حول أداء الموقع
+                        </p>
+                        <small class="text-muted">
+                          <i class="fas fa-film"></i> <span>3 آلاف مشاهدة</span>
+                          <i class="far fa-clock"></i> <span>قبل 9 أشهر</span>
+                        </small>
+                        <a href="channel.html" class="channel-img">
+                          <img src="img//khamsat.jpg" alt="channel image" class="rounded-circle ms-3" width="30px">
+                          <span class="card-text">موقع خمسات </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 my-3">
+                  <div class="card">
+                    <div class="card-horizontal d-md-flex d-block">
+                      <div class="img-square-wrapper">
+                        <a href="watch.html">
+                          <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap">
+                        </a>
+                      </div>
+                      <div class="card-body p-2">
+                        <a href="watch.html">
+                          <h4 class="card-title"> كيف تستخدم أدوات المطور DevTools في Chrome</h4>
+                        </a>
+                        <p class="card-text">نتعرف في هذا الدرس على أدوات المطور DevTools التي يتيحها متصفح google chrome و التي تمكنك من تتبع
+                          مشاكل التنسيق CSS بفعالية. و اكتشاف أخطاء JavaScript بسهولة. بالإضافة إلى أنها تقدم لك إيضاءات و معلومات حول أداء الموقع
+                        </p>
+                        <small class="text-muted">
+                          <i class="fas fa-film"></i> <span>3 آلاف مشاهدة</span>
+                          <i class="far fa-clock"></i> <span>قبل 9 أشهر</span>
+                        </small>
+                        <a href="channel.html" class="channel-img">
+                          <img src="img//khamsat.jpg" alt="channel image" class="rounded-circle ms-3" width="30px">
+                          <span class="card-text">موقع خمسات </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 my-3">
+                  <div class="card">
+                    <div class="card-horizontal d-md-flex d-block">
+                      <div class="img-square-wrapper">
+                        <a href="watch.html">
+                          <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap">
+                        </a>
+                      </div>
+                      <div class="card-body p-2">
+                        <a href="watch.html">
+                          <h4 class="card-title"> كيف تستخدم أدوات المطور DevTools في Chrome</h4>
+                        </a>
+                        <p class="card-text">نتعرف في هذا الدرس على أدوات المطور DevTools التي يتيحها متصفح google chrome و التي تمكنك من تتبع
+                          مشاكل التنسيق CSS بفعالية. و اكتشاف أخطاء JavaScript بسهولة. بالإضافة إلى أنها تقدم لك إيضاءات و معلومات حول أداء الموقع
+                        </p>
+                        <small class="text-muted">
+                          <i class="fas fa-film"></i> <span>3 آلاف مشاهدة</span>
+                          <i class="far fa-clock"></i> <span>قبل 9 أشهر</span>
+                        </small>
+                        <a href="channel.html" class="channel-img">
+                          <img src="img//khamsat.jpg" alt="channel image" class="rounded-circle ms-3" width="30px">
+                          <span class="card-text">موقع خمسات </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 my-3">
+                  <div class="card">
+                    <div class="card-horizontal d-md-flex d-block">
+                      <div class="img-square-wrapper">
+                        <a href="watch.html">
+                          <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap">
+                        </a>
+                      </div>
+                      <div class="card-body p-2">
+                        <a href="watch.html">
+                          <h4 class="card-title"> كيف تستخدم أدوات المطور DevTools في Chrome</h4>
+                        </a>
+                        <p class="card-text">نتعرف في هذا الدرس على أدوات المطور DevTools التي يتيحها متصفح google chrome و التي تمكنك من تتبع
+                          مشاكل التنسيق CSS بفعالية. و اكتشاف أخطاء JavaScript بسهولة. بالإضافة إلى أنها تقدم لك إيضاءات و معلومات حول أداء الموقع
+                        </p>
+                        <small class="text-muted">
+                          <i class="fas fa-film"></i> <span>3 آلاف مشاهدة</span>
+                          <i class="far fa-clock"></i> <span>قبل 9 أشهر</span>
+                        </small>
+                        <a href="channel.html" class="channel-img">
+                          <img src="img//khamsat.jpg" alt="channel image" class="rounded-circle ms-3" width="30px">
+                          <span class="card-text">موقع خمسات </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 my-3">
+                  <div class="card">
+                    <div class="card-horizontal d-md-flex d-block">
+                      <div class="img-square-wrapper">
+                        <a href="watch.html">
+                          <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap">
+                        </a>
+                      </div>
+                      <div class="card-body p-2">
+                        <a href="watch.html">
+                          <h4 class="card-title"> كيف تستخدم أدوات المطور DevTools في Chrome</h4>
+                        </a>
+                        <p class="card-text">نتعرف في هذا الدرس على أدوات المطور DevTools التي يتيحها متصفح google chrome و التي تمكنك من تتبع
+                          مشاكل التنسيق CSS بفعالية. و اكتشاف أخطاء JavaScript بسهولة. بالإضافة إلى أنها تقدم لك إيضاءات و معلومات حول أداء الموقع
+                        </p>
+                        <small class="text-muted">
+                          <i class="fas fa-film"></i> <span>3 آلاف مشاهدة</span>
+                          <i class="far fa-clock"></i> <span>قبل 9 أشهر</span>
+                        </small>
+                        <a href="channel.html" class="channel-img">
+                          <img src="img//khamsat.jpg" alt="channel image" class="rounded-circle ms-3" width="30px">
+                          <span class="card-text">موقع خمسات </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 my-3">
+                  <div class="card">
+                    <div class="card-horizontal d-md-flex d-block">
+                      <div class="img-square-wrapper">
+                        <a href="watch.html">
+                          <img class="" src="img/thumbnail/devtools.jpg" alt="Card image cap">
+                        </a>
+                      </div>
+                      <div class="card-body p-2">
+                        <a href="watch.html">
+                          <h4 class="card-title"> كيف تستخدم أدوات المطور DevTools في Chrome</h4>
+                        </a>
+                        <p class="card-text">نتعرف في هذا الدرس على أدوات المطور DevTools التي يتيحها متصفح google chrome و التي تمكنك من تتبع
+                          مشاكل التنسيق CSS بفعالية. و اكتشاف أخطاء JavaScript بسهولة. بالإضافة إلى أنها تقدم لك إيضاءات و معلومات حول أداء الموقع
+                        </p>
+                        <small class="text-muted">
+                          <i class="fas fa-film"></i> <span>3 آلاف مشاهدة</span>
+                          <i class="far fa-clock"></i> <span>قبل 9 أشهر</span>
+                        </small>
+                        <a href="channel.html" class="channel-img">
+                          <img src="img//khamsat.jpg" alt="channel image" class="rounded-circle ms-3" width="30px">
+                          <span class="card-text">موقع خمسات </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/f1c660d501.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
